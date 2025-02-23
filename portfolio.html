@@ -1,91 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
     <style>
-        /* Basic Reset */
+        /* Basic reset for body and html */
         body, html {
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
+            height: 100%;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./assets/images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
-        /* Header Section */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
 
-        header a {
-            color: white;
+        /* Left side: icon and title */
+        .navbar-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .title-text {
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+
+        /* Right side: nav links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .nav-title-link, .button {
             text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 15px;
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px;
+            margin-left: 20px;
         }
 
-        header a:hover {
+        .nav-title-link:hover, .button:hover {
             text-decoration: underline;
         }
 
-        /* Gallery Section */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+        /* Portfolio Page Styling */
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            padding: 10px;
         }
 
-        .gallery-item {
+        .portfolio-item {
             position: relative;
-            width: 100%;
-            height: 300px; /* Ensure square images */
-            background-size: cover;
-            background-position: center;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            overflow: hidden;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        .gallery-item h2 {
+        .portfolio-item:hover {
+            transform: scale(1.05); /* Slightly zoom on hover */
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portfolio-item .portfolio-title {
             position: absolute;
             bottom: 10px;
             left: 10px;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            padding: 10px;
+            font-size: 1.5em;
+            padding: 5px;
             border-radius: 5px;
-            font-size: 1.5rem;
         }
 
-        /* Optional: Hover effect */
-        .gallery-item:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s;
+        /* Fade-in Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: 250px;
+                height: 250px;
+            }
+
+            .portfolio-title {
+                font-size: 1.2em;
+            }
+
+            .navbar-left {
+                flex-direction: row;
+                align-items: center;
+                padding-left: 10px;
+            }
+
+            .bold-text {
+                font-size: 1.2em;
+            }
+
+            .nav-links {
+                padding-right: 10px;
+            }
+
+            .nav-title-link {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-container {
+                padding: 5px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .portfolio-item {
+                width: 100%;
+                height: 200px;
+            }
+
+            .portfolio-title {
+                font-size: 1em;
+            }
+
+            .navbar-left {
+                padding-left: 5px;
+            }
+
+            .nav-links {
+                padding-right: 5px;
+            }
+        }
+
     </style>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <div style="display: flex; align-items: center;">
+                <img class="icon" src="./assets/M.png" alt="Icon">
+                <span class="bold-text">Madeline Peery</span>
+            </div>
+            <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        </div>
 
-    <!-- Header Section -->
-    <header>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About Me</a>
-    </header>
+        <div class="nav-links">
+            <a class="nav-title-link" href="./portfolio.html">Portfolio</a>
+            <a class="nav-title-link" href="./about.html">About</a>
+        </div>
+    </div>
 
-    <!-- Gallery Section -->
-    <div class="gallery">
-        <!-- Cartography Image -->
-        <a href="cartography.html" class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Cartography');">
-            <h2>Cartography</h2>
+    <!-- Portfolio Content -->
+    <div class="portfolio-container">
+        <!-- Portfolio Item 1 -->
+        <a href="./project1.html" class="portfolio-item">
+            <img src="./assets/images/project1.jpg" alt="Project 1">
+            <div class="portfolio-title">Project 1</div>
         </a>
-
-        <!-- Data Viz Image -->
-        <a href="data-viz.html" class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Data+Viz');">
-            <h2>Data Viz</h2>
+        <!-- Portfolio Item 2 -->
+        <a href="./project2.html" class="portfolio-item">
+            <img src="./assets/images/project2.jpg" alt="Project 2">
+            <div class="portfolio-title">Project 2</div>
         </a>
     </div>
 
