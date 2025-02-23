@@ -38,7 +38,24 @@
             z-index: 10;
         }
 
-        /* Navbar links */
+        /* Left side: icon and title */
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px; /* Space between icon and title */
+        }
+
+        .navbar-title {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Right side: nav links */
         .nav-links {
             display: flex;
             align-items: center;
@@ -54,23 +71,6 @@
 
         .nav-title-link:hover, .button:hover {
             text-decoration: underline;
-        }
-
-        /* Right side items: icon and title */
-        .navbar-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px; /* Space between icon and title */
-        }
-
-        .navbar-title {
-            font-size: 1.2em;
-            color: #333;
         }
 
         /* Content Styling */
@@ -160,17 +160,17 @@
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <!-- Left side nav links -->
+        <!-- Left side: icon and title -->
+        <div class="navbar-left">
+            <img class="icon" src="https://via.placeholder.com/30" alt="Icon">
+            <div class="navbar-title">My Title</div>
+        </div>
+
+        <!-- Right side: nav links -->
         <div class="nav-links">
             <a class="nav-title-link" href="./index.html">Portfolio</a>
             <a class="button" href="./about.html">Resume</a>
             <a class="button" href="./portfolio.html">Portfolio</a>
-        </div>
-
-        <!-- Right side icon and title -->
-        <div class="navbar-right">
-            <img class="icon" src="https://via.placeholder.com/30" alt="Icon">
-            <div class="navbar-title">My Title</div>
         </div>
     </div>
 
