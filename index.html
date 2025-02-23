@@ -73,12 +73,48 @@
             text-decoration: none;
             font-size: 1.2em;
             color: #333;
-            padding: 10px;
+            padding: 10px 20px;
             margin-left: 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
         }
 
         .nav-title-link:hover, .button:hover {
             text-decoration: underline;
+        }
+
+        /* Cuter Button Styling */
+        .button {
+            background-color: #ff8b8b; /* Soft, pastel pink */
+            color: white;
+            border: 2px solid #ff8b8b;
+            padding: 15px 30px;
+            border-radius: 30px; /* Rounded corners */
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background-color: #ff4f4f; /* Darker shade of pink */
+            color: white;
+            border-color: #ff4f4f;
+            transform: scale(1.05); /* Slightly enlarge the button */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+        }
+
+        /* Optional: Add icons to buttons for a more playful touch */
+        .button i { /* If using icons in the buttons */
+            font-size: 1.4em;
+            transition: transform 0.2s ease;
+        }
+
+        .button:hover i {
+            transform: translateX(5px); /* Slide the icon slightly when hovered */
         }
 
         /* Content Styling */
@@ -120,28 +156,6 @@
             margin: 20px 0;
         }
 
-        /* Button Styling */
-        .button-container {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .button {
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            text-align: center;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
         /* Fade-in Animations */
         @keyframes fadeIn {
             from {
@@ -162,7 +176,6 @@
                 opacity: 1;
             }
         }
-
     </style>
 </head>
 <body>
