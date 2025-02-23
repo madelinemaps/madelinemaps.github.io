@@ -1,174 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Reset */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Sulphur Point', sans-serif;
-            color: black;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* General Page Container */
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+    section {
+      padding: 40px;
+      margin: 0;
+    }
 
-        /* Section Styling */
-        .section {
-            padding: 40px;
-            text-align: center;
-            color: white;
-        }
+    /* About Section */
+    #about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #about .left {
+      width: 50%;
+    }
+    
+    #about .right img {
+      width: 100%;
+      height: auto;
+    }
 
-        /* About Section */
-        .about {
-            background-color: #ADD8E6; /* Light Blue */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-            gap: 20px; /* Add a gap between the text and image */
-        }
-
-        .about-text {
-            flex: 1; /* Takes up the remaining space */
-            padding-right: 20px;
-            text-align: left;
-        }
-
-        .about img {
-            width: 100%; /* Make the image responsive */
-            max-width: 300px; /* Limit the width to a max size */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover;
-            border-radius: 10px; /* Optional: rounded corners */
-        }
-
-        .about h1 {
-            font-size: 2.5em; /* Increased font size */
-            margin-bottom: 15px;
-        }
-
-        .about p {
-            font-size: 1.5em; /* Increased font size */
-            line-height: 1.8; /* Increased line height for readability */
-        }
-
-        /* Work Experience Section */
-        .work-experience {
-            background-color: #FFD700; /* Gold */
-            padding: 40px;
-        }
-
-        .work-experience h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .work-experience p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        /* Skills Section */
-        .skills {
-            background-color: #4CAF50; /* Green */
-            padding: 40px;
-            text-align: center;
-        }
-
-        .skills h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        /* Grid Layout for Icons */
-        .skills-icons {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive columns */
-            gap: 20px;
-            justify-items: center; /* Center the icons horizontally */
-        }
-
-        /* Icon Styling */
-        .skill-icon {
-            width: 50px;  /* Set icon width */
-            height: 50px; /* Set icon height */
-            object-fit: contain; /* Maintain aspect ratio */
-            opacity: 0.8; /* Slight transparency */
-            transition: opacity 0.3s ease; /* Smooth opacity transition */
-        }
-
-        .skill-icon:hover {
-            opacity: 1; /* Full opacity on hover */
-        }
-
-        /* Responsive Layout for Small Screens */
-        @media (max-width: 768px) {
-            .about {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .about img {
-                margin-top: 20px;
-                width: 80%;
-                height: auto;
-            }
-
-            .about-text {
-                padding-right: 0;
-            }
-        }
-    </style>
+    /* Work Experience Section */
+    #work-experience {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    #work-experience .left {
+      width: 45%;
+    }
+    
+    #work-experience .right {
+      width: 45%;
+    }
+    
+    /* Skills Section */
+    #skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+    
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- About Section -->
-        <div class="about">
-            <div class="about-text">
-                <h1>About Me</h1>
-                <p>Hello! I'm Madeline Peery, a passionate GIS Analyst and Environmental Scientist. I specialize in working with spatial data to solve environmental challenges. My focus is on using technology to promote sustainability and help make informed decisions for conservation and land management.</p>
-            </div>
-            <img src="madelinemaps.github.io/assets/paris5mins_small.png" alt="My Picture">
-        </div>
-
-        <!-- Work Experience Section -->
-        <div class="work-experience">
-            <h2>Work Experience</h2>
-            <p>I have worked on various GIS and environmental science projects, collaborating with professionals to create detailed maps and models that inform key decisions for land-use planning and conservation efforts.</p>
-            <!-- Add more content as needed -->
-        </div>
-
-        <!-- Skills Section -->
-        <div class="skills">
-            <h2>Skills</h2>
-            <div class="skills-icons">
-                <!-- Add your icon image paths here -->
-                <img src="madelinemaps.github.io/assets/M.png" alt="Skill 1" class="skill-icon">
-                <img src="madelinemaps.github.io/assets/M.png" alt="Skill 2" class="skill-icon">
-                <img src="madelinemaps.github.io/assets/M.png" alt="Skill 3" class="skill-icon">
-                <img src="madelinemaps.github.io/assets/M.png" alt="Skill 4" class="skill-icon">
-                <img src="madelinemaps.github.io/assets/M.png"alt="Skill 5" class="skill-icon">
-                <img src="madelinemaps.github.io/assets/M.png" alt="Skill 6" class="skill-icon">
-                <!-- Add more icons as needed -->
-            </div>
-        </div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="left">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat, metus id fringilla aliquam, odio ligula auctor mi, eget dictum metus odio at turpis.</p>
     </div>
-
-</body>
-</html>
-
+    <div class="right">
+      <img src="https://via.placeholder.com/400" alt="Profile Image">
     </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="work-experience">
+    <div class="left">
+      <h3>Workplace</h3>
+      <p><strong>Location:</strong> City, Country</p>
+      <p><strong>Year:</strong> 2020 - Present</p>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Responsible for overseeing operations.</li>
+        <li>Led a team of 10 people to success.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work-experience">
+    <div class="left">
+      <h3>Workplace</h3>
+      <p><strong>Location:</strong> City, Country</p>
+      <p><strong>Year:</strong> 2018 - 2020</p>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Developed innovative solutions for clients.</li>
+        <li>Managed several high-priority projects simultaneously.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 1"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 2"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 3"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 4"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 5"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 6"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 7"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 8"></div>
+    <div><img class="icon" src="https://via.placeholder.com/60" alt="Skill Icon 9"></div>
+  </section>
 
 </body>
 </html>
