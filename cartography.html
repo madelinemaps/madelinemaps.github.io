@@ -17,69 +17,64 @@
             color: black;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align content from the top of the screen */
             background-image: url('./assets/images/mountains.jpg');
             background-size: cover;
             background-position: center;
-            animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in effect */
+            animation: fadeIn 2s ease-in-out forwards;
             flex-direction: column;
         }
 
         /* Navbar Styling */
         .navbar {
             display: flex;
-            justify-content: space-between; /* Space out the items */
-            align-items: center; /* Vertically align items */
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 20px; /* Add 20px padding to both sides */
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* Solid non-transparent background */
+            padding: 10px 20px;
             width: 100%;
-            position: fixed; /* Fix the navbar at the top */
+            position: fixed;
             top: 0;
             left: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 10;
+            z-index: 10; /* Ensure navbar is above content */
         }
 
-        /* Adjust the content below the navbar */
+        /* Content padding to prevent overlap */
         body {
-            padding-top: 120px; /* Add top padding to the body to prevent overlap */
+            padding-top: 120px; /* Adjust for navbar height */
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         /* Left side: icon and title */
         .navbar-left {
             display: flex;
-            flex-direction: column; /* Arrange the icon and title vertically */
-            align-items: flex-start; /* Left-align the text */
-            padding-left: 20px; /* Add left padding for space */
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
         }
 
         .icon {
             width: 30px;
             height: 30px;
-            margin-right: 10px; /* Space between icon and title */
+            margin-right: 10px;
         }
 
         .bold-text {
             font-weight: bold;
-            font-size: 1.5em; /* Adjust size as needed */
+            font-size: 1.5em;
         }
 
         .title-text {
             font-weight: normal;
-            font-size: 1.2em; /* Adjust size as needed */
-        }
-
-        /* Left side title link (Clickable) */
-        .navbar-left a {
-            text-decoration: none;
-            color: black; /* Ensure it is black and not blue */
+            font-size: 1.2em;
         }
 
         /* Right side: nav links */
         .nav-links {
             display: flex;
             align-items: center;
-            padding-right: 20px; /* Add padding to the right side */
+            padding-right: 20px;
         }
 
         .nav-title-link {
@@ -92,14 +87,14 @@
         }
 
         .nav-title-link:hover {
-            transform: scale(1.1); /* Slightly increase size on hover */
-            text-decoration: none; /* Ensure no underline */
-            color: #333; /* Keep the color the same on hover */
+            transform: scale(1.1);
+            text-decoration: none;
+            color: #333;
         }
 
         .nav-title-link:active {
-            text-decoration: none; /* Ensure no underline when clicked */
-            color: #333; /* Keep the color the same when clicked */
+            text-decoration: none;
+            color: #333;
         }
 
         /* Gallery Title and Description */
@@ -119,39 +114,36 @@
         /* Gallery Grid */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 4 images per row */
+            grid-template-columns: repeat(4, 1fr); /* 4 images per row */
             gap: 20px;
             padding: 40px;
             max-width: 1200px;
             margin: 20px auto;
         }
 
-        /* Adjust the gallery item to be bigger */
-        /* Adjust the gallery item to be bigger */
-/* Adjust the gallery item to have specific width and height */
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 10px; /* Rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 400px; /* Set width to 400px */
-    height: 300px; /* Set height to 300px */
-}
+        /* Adjust the gallery item to have specific width and height */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 400px; /* Set width to 400px */
+            height: 300px; /* Set height to 300px */
+        }
 
-/* Image inside gallery item */
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images fill the space */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
+        /* Image inside gallery item */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
 
-/* On hover, make the image slightly bigger */
-.gallery-item:hover img {
-    transform: scale(1.1); /* Slightly increase the size */
-}
-
+        /* On hover, make the image slightly bigger */
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
 
         /* Transparent mask for hover effect */
         .gallery-item .mask {
@@ -160,7 +152,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Transparent black mask */
+            background-color: rgba(0, 0, 0, 0.4);
             opacity: 1;
             transition: opacity 0.3s ease;
         }
