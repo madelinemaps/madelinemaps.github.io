@@ -23,6 +23,7 @@
             background-position: center;
             animation: fadeIn 2s ease-in-out forwards;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         /* Navbar Styling */
@@ -42,8 +43,7 @@
 
         /* Content padding to prevent overlap */
         body {
-            padding-top: 350px; /* Increased for extra space below the navbar */
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            padding-top: 120px; /* Add padding for the space that the navbar occupies */
         }
 
         /* Left side: icon and title */
@@ -114,7 +114,7 @@
         /* Gallery Grid */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            grid-template-columns: repeat(3, 1fr); /* 4 images per row */
             gap: 20px;
             padding: 40px;
             max-width: 1200px;
