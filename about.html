@@ -29,62 +29,38 @@
         }
 
         /* About Section */
-.about {
-    background-color: #ADD8E6; /* Light Blue */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    gap: 20px; /* Add a gap between the text and image */
-}
+        .about {
+            background-color: #ADD8E6; /* Light Blue */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            gap: 20px; /* Add a gap between the text and image */
+        }
 
-.about-text {
-    flex: 1; /* Takes up the remaining space */
-    padding-right: 20px;
-    text-align: left;
-}
+        .about-text {
+            flex: 1; /* Takes up the remaining space */
+            padding-right: 20px;
+            text-align: left;
+        }
 
-.about img {
-    width: 100%; /* Make the image responsive */
-    max-width: 300px; /* Limit the width to a max size */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    border-radius: 10px; /* Optional: rounded corners */
-}
+        .about img {
+            width: 100%; /* Make the image responsive */
+            max-width: 300px; /* Limit the width to a max size */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px; /* Optional: rounded corners */
+        }
 
+        .about h1 {
+            font-size: 2.5em; /* Increased font size */
+            margin-bottom: 15px;
+        }
 
-.about h1 {
-    font-size: 2.5em; /* Increased font size */
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 1.5em; /* Increased font size */
-    line-height: 1.8; /* Increased line height for readability */
-}
-
-
-/* Responsive Layout for Small Screens */
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about img {
-    width: 100%; /* Make the image take up 100% of its container's width */
-    max-width: 300px; /* Set a max width so it doesn't get too large */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image doesn't stretch */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
-    .about-text {
-        padding-right: 0;
-        max-width: 100%; /* For small screens, take up the full width */
-    }
-}
-
+        .about p {
+            font-size: 1.5em; /* Increased font size */
+            line-height: 1.8; /* Increased line height for readability */
+        }
 
         /* Work Experience Section */
         .work-experience {
@@ -106,6 +82,7 @@
         .skills {
             background-color: #4CAF50; /* Green */
             padding: 40px;
+            text-align: center;
         }
 
         .skills h2 {
@@ -113,14 +90,25 @@
             margin-bottom: 15px;
         }
 
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1.2em;
+        /* Grid Layout for Icons */
+        .skills-icons {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive columns */
+            gap: 20px;
+            justify-items: center; /* Center the icons horizontally */
         }
 
-        .skills li {
-            margin: 10px 0;
+        /* Icon Styling */
+        .skill-icon {
+            width: 50px;  /* Set icon width */
+            height: 50px; /* Set icon height */
+            object-fit: contain; /* Maintain aspect ratio */
+            opacity: 0.8; /* Slight transparency */
+            transition: opacity 0.3s ease; /* Smooth opacity transition */
+        }
+
+        .skill-icon:hover {
+            opacity: 1; /* Full opacity on hover */
         }
 
         /* Responsive Layout for Small Screens */
@@ -164,15 +152,22 @@
         <!-- Skills Section -->
         <div class="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>GIS Analysis & Mapping</li>
-                <li>Environmental Science Research</li>
-                <li>Python & Data Visualization</li>
-                <li>ArcGIS & QGIS</li>
-                <li>Remote Sensing</li>
-                <li>Project Management</li>
-            </ul>
+            <div class="skills-icons">
+                <!-- Add your icon image paths here -->
+                <img src="path-to-your-icon1.png" alt="Skill 1" class="skill-icon">
+                <img src="path-to-your-icon2.png" alt="Skill 2" class="skill-icon">
+                <img src="path-to-your-icon3.png" alt="Skill 3" class="skill-icon">
+                <img src="path-to-your-icon4.png" alt="Skill 4" class="skill-icon">
+                <img src="path-to-your-icon5.png" alt="Skill 5" class="skill-icon">
+                <img src="path-to-your-icon6.png" alt="Skill 6" class="skill-icon">
+                <!-- Add more icons as needed -->
+            </div>
         </div>
+    </div>
+
+</body>
+</html>
+
     </div>
 
 </body>
