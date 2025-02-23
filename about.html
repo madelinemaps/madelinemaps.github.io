@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
+    <style>
+        /* Basic reset for body and html */
+        body, html {
+            margin: 0;
+            height: 100%;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./assets/images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
 
-    /* Navbar Styling */
+        /* Navbar Styling */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -50,196 +63,129 @@
         }
 
         /* Right side: nav links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+        }
 
-.nav-title-link {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #333;
-    padding: 10px;
-    margin-left: 20px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px;
+            margin-left: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-.nav-title-link:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    text-decoration: none; /* Ensure no underline */
-    color: #333; /* Keep the color the same on hover */
-}
+        .nav-title-link:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+            color: #333;
+        }
 
-.nav-title-link:active {
-    text-decoration: none; /* Ensure no underline when clicked */
-    color: #333; /* Keep the color the same when clicked */
-}
+        .nav-title-link:active {
+            text-decoration: none;
+            color: #333;
+        }
 
-    /* About Section */
-    #about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #f0f8ff; /* Light blue */
-      color: #333;
-    }
+        /* Fade-in Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-    #about .left {
-      width: 50%;
-    }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: 400px;
+                height: 250px;
+            }
 
-    #about .right img {
-      width: 100%;
-      height: auto;
-    }
+            .portfolio-title {
+                font-size: 1.2em;
+            }
 
-    /* Work Experience Section */
-    #work-experience {
-      display: flex;
-      justify-content: space-between;
-      background-color: #e6f7ff; /* Light cyan */
-      color: #333;
-    }
+            .navbar-left {
+                flex-direction: row;
+                align-items: center;
+                padding-left: 10px;
+            }
 
-    #work-experience .left {
-      width: 45%;
-    }
+            .bold-text {
+                font-size: 1.2em;
+            }
 
-    #work-experience .right {
-      width: 45%;
-    }
+            .nav-links {
+                padding-right: 10px;
+            }
 
-    /* Skills Section */
-    #skills {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-items: center;
-      align-items: center;
-      background-color: #d9f7be; /* Light green */
-      color: #333;
-      text-align: center;
-      padding-top: 40px;
-    }
+            .nav-title-link {
+                font-size: 1.1em;
+            }
+        }
 
-    #skills h2 {
-      grid-column: span 3;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+        @media (max-width: 480px) {
+            .portfolio-container {
+                padding: 5px;
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .icon {
-      width: 90px;
-      height: 90px;
-    }
+            .portfolio-item {
+                width: 100%;
+                height: 200px;
+            }
 
-    .icon-title {
-      font-size: 14px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-  </style>
+            .portfolio-title {
+                font-size: 1em;
+            }
+
+            .navbar-left {
+                padding-left: 5px;
+            }
+
+            .nav-links {
+                padding-right: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
+                <img class="icon" src="./assets/M.png" alt="Icon">
+                <span class="bold-text">Madeline Peery</span>
+            </a>
+            <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        </div>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="navbar-left">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
-        <img class="icon" src="./assets/M.png" alt="Icon">
-        <span class="bold-text">Madeline Peery</span>
-      </a>
-      <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        <div class="nav-links">
+            <a class="nav-title-link" href="./portfolio.html">Portfolio</a>
+            <a class="nav-title-link" href="./about.html">About</a>
+        </div>
     </div>
 
-    <div class="nav-links">
-      <a class="nav-title-link" href="#about">Portfolio</a>
-      <a class="nav-title-link" href="#work-experience">About</a>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="left">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat, metus id fringilla aliquam, odio ligula auctor mi, eget dictum metus odio at turpis.</p>
-    </div>
-    <div class="right">
-      <img src="assets/M.png" alt="Profile Image">
-    </div>
-  </section>
-
-  <!-- Work Experience Section -->
-  <section id="work-experience">
-    <div class="left">
-      <h3>Workplace</h3>
-      <p><strong>Location:</strong> City, Country</p>
-      <p><strong>Year:</strong> 2020 - Present</p>
-    </div>
-    <div class="right">
-      <ul>
-        <li>Responsible for overseeing operations.</li>
-        <li>Led a team of 10 people to success.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="work-experience">
-    <div class="left">
-      <h3>Workplace</h3>
-      <p><strong>Location:</strong> City, Country</p>
-      <p><strong>Year:</strong> 2018 - 2020</p>
-    </div>
-    <div class="right">
-      <ul>
-        <li>Developed innovative solutions for clients.</li>
-        <li>Managed several high-priority projects simultaneously.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 1">
-      <p class="icon-title">Skill 1</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 2">
-      <p class="icon-title">Skill 2</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 3">
-      <p class="icon-title">Skill 3</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 4">
-      <p class="icon-title">Skill 4</p>
-    </div>
-    <div>
-      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 5">
-      <p class="icon-title">Skill 5</p>
-    </div>
-    <div>
-      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 6">
-      <p class="icon-title">Skill 6</p>
-    </div>
-    <div>
-      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 7">
-      <p class="icon-title">Skill 7</p>
-    </div>
-    <div>
-      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 8">
-      <p class="icon-title">Skill 8</p>
-    </div>
-    <div>
-      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 9">
-      <p class="icon-title">Skill 9</p>
-    </div>
-  </section>
-
+    <!-- About Section Content -->
+    <section class="about">
+        <div class="about-container" style="display: flex; padding: 50px; justify-content: space-between;">
+            <!-- Left Side: About Text -->
+            <div style="width: 45%;">
+                <h2>About Me</h2>
+                <p>I am a GIS Analyst and Environmental Scientist with a passion for mapping and spatial data analysis...</p>
+            </div>
+            <!-- Right Side: Image -->
+            <div style="width: 45%;">
+                <img src="path_to_your_image.jpg" alt="About Me Image" style="width: 100%; border-radius: 10px;">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
