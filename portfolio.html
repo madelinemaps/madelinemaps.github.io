@@ -63,23 +63,32 @@
         }
 
         /* Right side: nav links */
-        .nav-links {
-            display: flex;
-            align-items: center;
-            padding-right: 20px;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
 
-        .nav-title-link, .button {
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #333;
-            padding: 10px;
-            margin-left: 20px;
-        }
+.nav-title-link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+    margin-left: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-        .nav-title-link:hover, .button:hover {
-            text-decoration: underline;
-        }
+.nav-title-link:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    text-decoration: none; /* Ensure no underline */
+    color: #333; /* Keep the color the same on hover */
+}
+
+.nav-title-link:active {
+    text-decoration: none; /* Ensure no underline when clicked */
+    color: #333; /* Keep the color the same when clicked */
+}
+
 
         /* Portfolio Page Styling */
         .portfolio-container {
