@@ -34,31 +34,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 80px; /* Increased padding to make the section larger */
+    height: 600px; /* You can increase or adjust the height as needed */
 }
 
 .about-text {
-    flex: 1; /* Ensures the text section takes up 50% */
+    flex: 1;
     padding-right: 20px;
-    max-width: 50%; /* Limits the width to 50% of the section */
+    max-width: 50%; /* Ensures the paragraph takes up half of the section */
 }
 
 .about img {
-    width: 200px;
-    height: 250px;
+    width: 300px; /* Increased width of the image */
+    height: 375px; /* Increased height of the image */
     object-fit: cover;
     border-radius: 10px;
 }
 
 .about h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 15px;
 }
 
 .about p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.5em; /* Increased font size */
+    line-height: 1.8; /* Increased line height for readability */
 }
+
 
 /* Responsive Layout for Small Screens */
 @media (max-width: 768px) {
