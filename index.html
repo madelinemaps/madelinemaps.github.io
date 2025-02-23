@@ -30,7 +30,7 @@
             justify-content: space-between; /* Space out the items */
             align-items: center; /* Vertically align items */
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 20px;
+            padding: 10px 20px; /* Add 20px padding to both sides */
             width: 100%;
             position: absolute;
             top: 0;
@@ -41,7 +41,8 @@
         /* Left side: icon and title */
         .navbar-left {
             display: flex;
-            align-items: center; /* Align items horizontally */
+            flex-direction: column; /* Arrange the icon and title vertically */
+            align-items: flex-start; /* Left-align the text */
             padding-left: 20px; /* Add left padding for space */
         }
 
@@ -65,6 +66,7 @@
         .nav-links {
             display: flex;
             align-items: center;
+            padding-right: 20px; /* Add padding to the right side */
         }
 
         .nav-title-link, .button {
@@ -168,8 +170,10 @@
     <div class="navbar">
         <!-- Left side: icon and title -->
         <div class="navbar-left">
-            <img class="icon" src="./assets/M.png" alt="Icon">
-            <span class="bold-text">Madeline Peery</span>
+            <div style="display: flex; align-items: center;">
+                <img class="icon" src="./assets/M.png" alt="Icon">
+                <span class="bold-text">Madeline Peery</span>
+            </div>
             <span class="title-text">GIS Analyst | Environmental Scientist</span>
         </div>
 
