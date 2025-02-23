@@ -93,8 +93,8 @@
 
         .portfolio-item {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 500px; /* Adjusted width for rectangular shape */
+            height: 300px; /* Adjusted height for rectangular shape */
             margin: 20px;
             overflow: hidden;
             border-radius: 10px;
@@ -115,13 +115,15 @@
 
         .portfolio-item .portfolio-title {
             position: absolute;
-            bottom: 10px; /* Ensure it stays at the bottom */
-            left: 10px; /* Align to the left */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Perfect centering */
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             font-size: 1.5em;
-            padding: 5px;
+            padding: 10px;
             border-radius: 5px;
+            text-align: center;
         }
 
         /* Fade-in Animations */
@@ -137,8 +139,8 @@
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             .portfolio-item {
-                width: 250px;
-                height: 250px;
+                width: 400px; /* Adjust width for tablets */
+                height: 250px; /* Adjust height for tablets */
             }
 
             .portfolio-title {
@@ -188,7 +190,6 @@
                 padding-right: 5px;
             }
         }
-
     </style>
 </head>
 <body>
