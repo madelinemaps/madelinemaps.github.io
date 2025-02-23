@@ -73,48 +73,12 @@
             text-decoration: none;
             font-size: 1.2em;
             color: #333;
-            padding: 10px 20px;
+            padding: 10px;
             margin-left: 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
         }
 
         .nav-title-link:hover, .button:hover {
             text-decoration: underline;
-        }
-
-        /* Cuter Button Styling */
-        .button {
-            background-color: #ff8b8b; /* Soft, pastel pink */
-            color: white;
-            border: 2px solid #ff8b8b;
-            padding: 15px 30px;
-            border-radius: 30px; /* Rounded corners */
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-        }
-
-        /* Button Hover Effect */
-        .button:hover {
-            background-color: #ff4f4f; /* Darker shade of pink */
-            color: white;
-            border-color: #ff4f4f;
-            transform: scale(1.05); /* Slightly enlarge the button */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
-        }
-
-        /* Optional: Add icons to buttons for a more playful touch */
-        .button i { /* If using icons in the buttons */
-            font-size: 1.4em;
-            transition: transform 0.2s ease;
-        }
-
-        .button:hover i {
-            transform: translateX(5px); /* Slide the icon slightly when hovered */
         }
 
         /* Content Styling */
@@ -123,11 +87,11 @@
             justify-content: center;
             align-items: center;
             text-align: left;
-            background-color: rgba(255, 255, 255, 0.8); /* Optional: white background behind content */
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 0; /* Remove rounded corners */
+            box-shadow: none; /* Remove the shadow */
             animation: fadeInContent 2s ease-in-out forwards;
+            background: transparent; /* Ensure the content background is transparent */
         }
 
         /* Layout for image and content */
@@ -156,6 +120,30 @@
             margin: 20px 0;
         }
 
+        /* Button Styling */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #007bff;
+            border-radius: 30px; /* Make buttons have rounded edges */
+            cursor: pointer;
+            font-size: 1.2em;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Give a slight "lift" effect on hover */
+        }
+
         /* Fade-in Animations */
         @keyframes fadeIn {
             from {
@@ -176,6 +164,7 @@
                 opacity: 1;
             }
         }
+
     </style>
 </head>
 <body>
