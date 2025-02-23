@@ -127,27 +127,29 @@
         }
 
         /* Adjust the gallery item to be bigger */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            border-radius: 10px; /* Rounded corners */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            aspect-ratio: 16 / 7; /* Increase the width/height ratio to make it bigger */
-        }
+        /* Adjust the gallery item to be bigger */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 16 / 9; /* Adjust aspect ratio to make it taller and wider */
+}
 
-        /* Image inside gallery item */
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures images fill the space */
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+/* Image inside gallery item */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the space */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-        /* On hover, make the image slightly bigger */
-        .gallery-item:hover img {
-            transform: scale(1.1); /* Slightly increase the size */
-        }
+/* On hover, make the image slightly bigger */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slightly increase the size */
+}
+
 
         /* Transparent mask for hover effect */
         .gallery-item .mask {
