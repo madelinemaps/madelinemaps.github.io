@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
+        }
+
+        /* General Page Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #ADD8E6; /* Light Blue */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .about img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Work Experience Section */
+        .work-experience {
+            background-color: #FFD700; /* Gold */
+            padding: 40px;
+        }
+
+        .work-experience h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .work-experience p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #4CAF50; /* Green */
+            padding: 40px;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        .skills li {
+            margin: 10px 0;
+        }
+
+        /* Responsive Layout for Small Screens */
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about img {
+                margin-top: 20px;
+                width: 80%;
+                height: auto;
+            }
+
+            .about-text {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- About Section -->
+        <div class="about">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Hello! I'm Madeline Peery, a passionate GIS Analyst and Environmental Scientist. I specialize in working with spatial data to solve environmental challenges. My focus is on using technology to promote sustainability and help make informed decisions for conservation and land management.</p>
+            </div>
+            <img src="https://via.placeholder.com/200x250" alt="My Picture">
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="work-experience">
+            <h2>Work Experience</h2>
+            <p>I have worked on various GIS and environmental science projects, collaborating with professionals to create detailed maps and models that inform key decisions for land-use planning and conservation efforts.</p>
+            <!-- Add more content as needed -->
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>GIS Analysis & Mapping</li>
+                <li>Environmental Science Research</li>
+                <li>Python & Data Visualization</li>
+                <li>ArcGIS & QGIS</li>
+                <li>Remote Sensing</li>
+                <li>Project Management</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
