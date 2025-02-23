@@ -29,35 +29,56 @@
         }
 
         /* About Section */
-        .about {
-            background-color: #ADD8E6; /* Light Blue */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-        }
+.about {
+    background-color: #ADD8E6; /* Light Blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
 
-        .about-text {
-            flex: 1;
-            padding-right: 20px;
-        }
+.about-text {
+    flex: 1; /* Ensures the text section takes up 50% */
+    padding-right: 20px;
+    max-width: 50%; /* Limits the width to 50% of the section */
+}
 
-        .about img {
-            width: 200px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+.about img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-        .about h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+.about h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
 
-        .about p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        margin-top: 20px;
+        width: 80%;
+        height: auto;
+    }
+
+    .about-text {
+        padding-right: 0;
+        max-width: 100%; /* For small screens, take up the full width */
+    }
+}
+
 
         /* Work Experience Section */
         .work-experience {
