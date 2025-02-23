@@ -1,292 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="./assets/images/1311.png" />
-    <title>Gallery | My Portfolio</title>
-    <meta name="description" content="Explore my gallery of various works.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartography</title>
     <style>
-        /* Basic reset for body and html */
-        body, html {
-            margin: 0;
-            height: 100%;
-            font-family: 'Sulphur Point', sans-serif;
-            color: black;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align content from the top of the screen */
-            background-image: url('./assets/images/mountains.jpg');
-            background-size: cover;
-            background-position: center;
-            animation: fadeIn 2s ease-in-out forwards;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff; /* Solid non-transparent background */
-            padding: 10px 20px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 10; /* Ensure navbar is above content */
-        }
-
-        /* Content padding to make header and images start a third of the way down */
         body {
-            padding-top: 33vh; /* 33% of the viewport height, pushing the content down */
-        }
-
-        /* Left side: icon and title */
-        .navbar-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left: 20px;
-        }
-
-        .icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-
-        .bold-text {
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-
-        .title-text {
-            font-weight: normal;
-            font-size: 1.2em;
-        }
-
-        /* Right side: nav links */
-        .nav-links {
-            display: flex;
-            align-items: center;
-            padding-right: 20px;
-        }
-
-        .nav-title-link {
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #333;
-            padding: 10px;
-            margin-left: 20px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .nav-title-link:hover {
-            transform: scale(1.1);
-            text-decoration: none;
-            color: #333;
-        }
-
-        .nav-title-link:active {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* Cartography Header Styling */
-        .cartography-header {
+            font-family: Arial, sans-serif;
             text-align: center;
-            font-size: 3.5em;
-            font-weight: bold;
-            margin-top: 40px; /* Adjust for spacing below navbar */
-            color: white;
         }
-
-        /* Gallery Title and Description */
-        .gallery-title {
-            text-align: center;
-            font-size: 3em;
-            margin-top: 40px;
-            font-weight: bold;
+        h1 {
+            margin-top: 50px;
         }
-
-        .gallery-description {
-            text-align: center;
-            font-size: 1.5em;
-            margin-top: 20px;
-            max-width: 800px;
-        }
-
-        /* Gallery Grid */
-        .gallery {
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 20px auto;
+            margin: 50px;
         }
-
-        /* Adjust the gallery item to have specific width and height */
-        .gallery-item {
+        .grid-item {
             position: relative;
+            width: 400px;
+            height: 300px;
             overflow: hidden;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 400px; /* Set width to 400px */
-            height: 300px; /* Set height to 300px */
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
-
-        /* Image inside gallery item */
-        .gallery-item img {
+        .grid-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.3s ease, transform 0.3s ease;
         }
-
-        /* On hover, make the image slightly bigger */
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Transparent mask for hover effect */
-        .gallery-item .mask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-
-        /* Hide the mask on hover */
-        .gallery-item:hover .mask {
-            opacity: 0;
-        }
-
-        /* Image title on top of the image */
-        .gallery-item .image-title {
+        .grid-item .title {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 1.5em;
-            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-
-        /* Fade-in Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .grid-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
-
     </style>
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <!-- Left side: icon and title -->
-        <div class="navbar-left">
-            <div style="display: flex; align-items: center;">
-                <img class="icon" src="./assets/M.png" alt="Icon">
-                <a href="./index.html" class="bold-text">Madeline Peery</a>
-            </div>
-            <span class="title-text">GIS Analyst | Environmental Scientist</span>
+    <h1>Cartography</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://example.com/page1">
+                <img src="https://via.placeholder.com/400x300" alt="Image 1">
+                <div class="title">Map 1</div>
+            </a>
         </div>
-
-        <!-- Right side: nav links -->
-        <div class="nav-links">
-            <a class="nav-title-link" href="./portfolio.html">Portfolio</a>
-            <a class="nav-title-link" href="./about.html">About</a>
+        <div class="grid-item">
+            <a href="https://example.com/page2">
+                <img src="https://via.placeholder.com/400x300" alt="Image 2">
+                <div class="title">Map 2</div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://example.com/page3">
+                <img src="https://via.placeholder.com/400x300" alt="Image 3">
+                <div class="title">Map 3</div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://example.com/page4">
+                <img src="https://via.placeholder.com/400x300" alt="Image 4">
+                <div class="title">Map 4</div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://example.com/page5">
+                <img src="https://via.placeholder.com/400x300" alt="Image 5">
+                <div class="title">Map 5</div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://example.com/page6">
+                <img src="https://via.placeholder.com/400x300" alt="Image 6">
+                <div class="title">Map 6</div>
+            </a>
         </div>
     </div>
-
-    <!-- Cartography Header -->
-    <div class="cartography-header">Cartography</div>
-
-    <!-- Gallery Section -->
-    <div class="gallery-title">Gallery</div>
-    <div class="gallery-description">Explore a selection of my work, click on an image to learn more.</div>
-
-    <!-- Gallery Grid -->
-    <div class="gallery">
-        <!-- Gallery Item 1 -->
-        <a href="./project1.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 1">
-            <div class="mask"></div>
-            <div class="image-title">Project 1</div>
-        </a>
-
-        <!-- Gallery Item 2 -->
-        <a href="./project2.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 2">
-            <div class="mask"></div>
-            <div class="image-title">Project 2</div>
-        </a>
-
-        <!-- Gallery Item 3 -->
-        <a href="./project3.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 3">
-            <div class="mask"></div>
-            <div class="image-title">Project 3</div>
-        </a>
-
-        <!-- Gallery Item 4 -->
-        <a href="./project4.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 4">
-            <div class="mask"></div>
-            <div class="image-title">Project 4</div>
-        </a>
-
-        <!-- Gallery Item 5 -->
-        <a href="./project5.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 5">
-            <div class="mask"></div>
-            <div class="image-title">Project 5</div>
-        </a>
-
-        <!-- Gallery Item 6 -->
-        <a href="./project6.html" class="gallery-item">
-            <img src="./assets/gallery_image6.jpg" alt="Project 6">
-            <div class="mask"></div>
-            <div class="image-title">Project 6</div>
-        </a>
-
-        <!-- Gallery Item 7 -->
-        <a href="./project7.html" class="gallery-item">
-            <img src="./assets/gallery_image7.jpg" alt="Project 7">
-            <div class="mask"></div>
-            <div class="image-title">Project 7</div>
-        </a>
-
-        <!-- Gallery Item 8 -->
-        <a href="./project8.html" class="gallery-item">
-            <img src="./assets/gallery_image8.jpg" alt="Project 8">
-            <div class="mask"></div>
-            <div class="image-title">Project 8</div>
-        </a>
-
-        <!-- Gallery Item 9 -->
-        <a href="./project9.html" class="gallery-item">
-            <img src="./assets/gallery_image9.jpg" alt="Project 9">
-            <div class="mask"></div>
-            <div class="image-title">Project 9</div>
-        </a>
-    </div>
-
 </body>
 </html>
