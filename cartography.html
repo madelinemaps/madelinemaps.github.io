@@ -41,9 +41,9 @@
             z-index: 10; /* Ensure navbar is above content */
         }
 
-        /* Content padding to prevent overlap */
+        /* Content padding to make header and images start a third of the way down */
         body {
-            padding-top: 120px; /* Add padding for the space that the navbar occupies */
+            padding-top: 33vh; /* 33% of the viewport height, pushing the content down */
         }
 
         /* Left side: icon and title */
@@ -97,11 +97,21 @@
             color: #333;
         }
 
+        /* Cartography Header Styling */
+        .cartography-header {
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-top: 40px; /* Adjust for spacing below navbar */
+            color: white;
+        }
+
         /* Gallery Title and Description */
         .gallery-title {
             text-align: center;
             font-size: 3em;
-            margin-top: 60px; /* Adjusted for spacing below navbar */
+            margin-top: 40px;
+            font-weight: bold;
         }
 
         .gallery-description {
@@ -205,6 +215,9 @@
         </div>
     </div>
 
+    <!-- Cartography Header -->
+    <div class="cartography-header">Cartography</div>
+
     <!-- Gallery Section -->
     <div class="gallery-title">Gallery</div>
     <div class="gallery-description">Explore a selection of my work, click on an image to learn more.</div>
@@ -213,35 +226,35 @@
     <div class="gallery">
         <!-- Gallery Item 1 -->
         <a href="./project1.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 1">
+            <img src="./assets/gallery_image1.jpg" alt="Project 1">
             <div class="mask"></div>
             <div class="image-title">Project 1</div>
         </a>
 
         <!-- Gallery Item 2 -->
         <a href="./project2.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 2">
+            <img src="./assets/gallery_image2.jpg" alt="Project 2">
             <div class="mask"></div>
             <div class="image-title">Project 2</div>
         </a>
 
         <!-- Gallery Item 3 -->
         <a href="./project3.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 3">
+            <img src="./assets/gallery_image3.jpg" alt="Project 3">
             <div class="mask"></div>
             <div class="image-title">Project 3</div>
         </a>
 
         <!-- Gallery Item 4 -->
         <a href="./project4.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 4">
+            <img src="./assets/gallery_image4.jpg" alt="Project 4">
             <div class="mask"></div>
             <div class="image-title">Project 4</div>
         </a>
 
         <!-- Gallery Item 5 -->
         <a href="./project5.html" class="gallery-item">
-            <img src="./assets/Bear_Riversmall.png" alt="Project 5">
+            <img src="./assets/gallery_image5.jpg" alt="Project 5">
             <div class="mask"></div>
             <div class="image-title">Project 5</div>
         </a>
@@ -277,3 +290,4 @@
 
 </body>
 </html>
+
