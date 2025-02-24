@@ -83,36 +83,41 @@
     }
 
     /* About Section */
-    #about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffffff; /* white */
-      color: #fff; /* Make text white to contrast with the darker background */
-      width: 100%;
-      max-width: 1200px; /* Limit the width */
-      margin: 0 auto; /* Center the section */
-      padding: 40px 20px; /* Add padding to the section */
-      margin-top: 80px; /* Add margin-top to avoid navbar overlap */
-    }
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f8ff; /* Light blue */
+  color: #333;
+  width: 100%;
+  max-width: 1200px; /* Limit the width */
+  margin: 0 auto; /* Center the section */
+  padding: 40px 20px; /* Add padding to the section */
+  margin-top: 120px; /* Increase margin-top to push it below the navbar */
+}
+
 
     /* Left side - Square with description */
-    #about .left {
-      width: 45%; /* Adjust the width */
-      background-color: #fff; /* White background for the square */
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
-      border-radius: 8px; /* Rounded corners */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    /* Left side - Square with description */
+#about .left {
+  width: 45%; /* Adjust the width */
+  background-color: #fff; /* White background for the square */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    #about .left p {
-      font-size: 1.1em;
-      text-align: center; /* Center the text */
-      line-height: 1.5; /* Adjust line height for readability */
-    }
+/* Description text in About section */
+#about .left p {
+  font-size: 1.1em;
+  text-align: center; /* Center the text */
+  line-height: 1.5; /* Adjust line height for readability */
+  color: black; /* Make the description text black */
+}
+
 
     /* Right side - Profile image */
     #about .right img {
