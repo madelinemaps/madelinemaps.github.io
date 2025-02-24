@@ -17,12 +17,12 @@
             color: black;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             background-image: url('./assets/images/mountains.jpg');
             background-size: cover;
             background-position: center;
             animation: fadeIn 2s ease-in-out forwards;
-            flex-direction: column; /* Ensure all sections stack vertically */
+            flex-direction: column;
         }
 
         /* Navbar Styling */
@@ -39,7 +39,6 @@
             z-index: 10;
         }
 
-        /* Left side: icon and title */
         .navbar-left {
             display: flex;
             flex-direction: column;
@@ -63,7 +62,6 @@
             font-size: 1.2em;
         }
 
-        /* Right side: nav links */
         .nav-links {
             display: flex;
             align-items: center;
@@ -80,99 +78,103 @@
         }
 
         .nav-title-link:hover {
-            transform: scale(1.1); /* Slightly increase size on hover */
+            transform: scale(1.1);
             text-decoration: none;
             color: #333;
         }
 
-        .nav-title-link:active {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* About Me Section Styling */
-        #about-me {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            width: 80%;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #about-me h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        #about-me p {
-            font-size: 1.2em;
-        }
-
-        /* Work Experience Section Styling */
-        #work-experience {
+        /* About Section Styling */
+        #about {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
+            background-color: #ffffff;
+            color: #333;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            margin-top: 120px;
+        }
+
+        #about .left {
+            width: 45%;
             background-color: #fff;
             padding: 20px;
-            margin: 20px auto;
-            max-width: 900px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        #work-experience .left {
-            width: 40%;
+        #about .left p {
+            font-size: 1.1em;
+            text-align: center;
+            line-height: 1.5;
+            color: black;
         }
 
-        #work-experience .left h3 {
+        #about .right img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Workplace Section Styling */
+        #workplace {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            color: #333;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #workplace .left, #workplace .right {
+            width: 45%;
+        }
+
+        #workplace .left h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
 
-        #work-experience .left p {
+        #workplace .left p {
             font-size: 1.1em;
-            margin: 5px 0;
+            margin-bottom: 10px;
         }
 
-        #work-experience .right {
-            width: 55%;
-        }
-
-        #work-experience .right ul {
+        #workplace .right ul {
             list-style-type: none;
             padding-left: 0;
         }
 
-        #work-experience .right ul li {
+        #workplace .right ul li {
             font-size: 1.1em;
             margin-bottom: 10px;
         }
 
         /* Skills Section Styling */
         #skills {
-            margin-top: 80px;
-            padding: 20px;
-            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            margin: 20px auto;
+            background-color: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #skills h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
         #skills div {
-            display: inline-block;
-            margin: 20px;
             text-align: center;
         }
 
@@ -197,52 +199,6 @@
             }
         }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .navbar-left {
-                flex-direction: row;
-                align-items: center;
-                padding-left: 10px;
-            }
-
-            .bold-text {
-                font-size: 1.2em;
-            }
-
-            .nav-links {
-                padding-right: 10px;
-            }
-
-            .nav-title-link {
-                font-size: 1.1em;
-            }
-
-            #work-experience {
-                flex-direction: column;
-            }
-
-            #work-experience .left, #work-experience .right {
-                width: 100%;
-            }
-
-            #skills div {
-                width: 45%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar-left {
-                padding-left: 5px;
-            }
-
-            .nav-links {
-                padding-right: 5px;
-            }
-
-            #skills div {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -262,44 +218,33 @@
         </div>
     </div>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h1>About Me</h1>
-        <p>Hello! I'm Madeline Peery, a passionate GIS Analyst and Environmental Scientist. I specialize in geographic information systems (GIS) and environmental data analysis. With a background in environmental science, I strive to apply my skills in GIS to solve real-world environmental challenges and contribute to a more sustainable future.</p>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="work-experience">
+    <!-- About Section -->
+    <section id="about">
         <div class="left">
-            <h3>Gradient</h3>
-            <p><strong>Location:</strong> Seattle, Washington</p>
-            <p><strong>Year:</strong> 2021 - Present</p>
+            <p>Hi, I'm Madeline, a GIS Analyst and Environmental Scientist. I grew up in Michigan, and after receiving my degree in Environmental Science from the University of Michigan, I packed my bags and headed west to beautiful Seattle.  I have worked extensively on projects related to chemical contamination and fate and transport, particularly regarding PFAS. I am most passionate about utilizing geospatial technology to help solve issues relating to water resources, public health, and environmental policy. Outside of work, you can find me hiking, training for marathons, or curled up with a good book on a rainy day.</p>
         </div>
         <div class="right">
-            <ul>
-                <li>Responsible for overseeing operations.</li>
-                <li>Led a team of 10 people to success.</li>
-            </ul>
+            <img src="assets/M.png" alt="Profile Image">
         </div>
     </section>
 
-    <section id="work-experience">
+    <!-- Workplace Section -->
+    <section id="workplace">
         <div class="left">
             <h3>Workplace</h3>
             <p><strong>Location:</strong> City, Country</p>
-            <p><strong>Year:</strong> 2018 - 2020</p>
+            <p><strong>Years Worked:</strong> 2018 - 2020</p>
         </div>
         <div class="right">
             <ul>
-                <li>Developed innovative solutions for clients.</li>
-                <li>Managed several high-priority projects simultaneously.</li>
+                <li>Led innovative environmental initiatives to address chemical contamination.</li>
+                <li>Collaborated on large-scale water resource management projects.</li>
             </ul>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
         <div>
             <img class="icon" src="assets/M.png" alt="Skill Icon 1">
             <p class="icon-title">Skill 1</p>
@@ -337,6 +282,5 @@
             <p class="icon-title">Skill 9</p>
         </div>
     </section>
-
 </body>
 </html>
