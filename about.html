@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  <!-- Add the Sulphur Point font -->
-  <style>
-    body {
-      font-family: 'Sulphur Point', sans-serif; /* Apply Sulphur Point font */
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>About Me</title>
+    <meta name="description" content="Learn more about Madeline Peery, GIS Analyst & Environmental Scientist.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
+    <style>
+        /* Basic reset for body and html */
+        body, html {
+            margin: 0;
+            height: 100%;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./assets/images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
 
-    section {
-      padding: 40px;
-      margin: 0;
-    }
-
-    /* Navbar Styling */
+        /* Navbar Styling */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -40,8 +47,8 @@
         }
 
         .icon {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             margin-right: 10px;
         }
 
@@ -56,224 +63,144 @@
         }
 
         /* Right side: nav links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+        }
 
-.nav-title-link {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #333;
-    padding: 10px;
-    margin-left: 20px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px;
+            margin-left: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-.nav-title-link:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    text-decoration: none; /* Ensure no underline */
-    color: #333; /* Keep the color the same on hover */
-}
+        .nav-title-link:hover {
+            transform: scale(1.1); /* Slightly increase size on hover */
+            text-decoration: none;
+            color: #333;
+        }
 
-.nav-title-link:active {
-    text-decoration: none; /* Ensure no underline when clicked */
-    color: #333; /* Keep the color the same when clicked */
-}
-    /* About Section */
-    #about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffffff; /* white */
-      color: #333;
-      width: 100%;
-      max-width: 1200px; /* Limit the width */
-      margin: 0 auto; /* Center the section */
-      padding: 40px 20px; /* Add padding to the section */
-      margin-top: 120px; /* Increase margin-top to push it below the navbar */
-    }
+        .nav-title-link:active {
+            text-decoration: none;
+            color: #333;
+        }
 
-    /* Left side - Square with description */
-    #about .left {
-      width: 45%; /* Adjust the width */
-      background-color: #fff; /* White background for the square */
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
-      border-radius: 8px; /* Rounded corners */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        /* About Section Styling */
+        section {
+            padding: 40px;
+            margin: 0;
+        }
 
-    /* Description text in About section */
-    #about .left p {
-      font-size: 1.1em;
-      text-align: center; /* Center the text */
-      line-height: 1.5; /* Adjust line height for readability */
-      color: black; /* Make the description text black */
-    }
+        #about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            color: #333;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            margin-top: 120px;
+        }
 
-    /* Right side - Profile image */
-    #about .right img {
-      width: 100%;
-      max-width: 400px; /* Limit image size */
-      height: auto;
-      border-radius: 8px;
-    }
+        #about .left {
+            width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Work Experience Section */
-    #work-experience {
-      display: flex;
-      justify-content: space-between;
-      background-color: #e6f7ff; /* Light cyan */
-      color: #333;
-      padding: 40px 20px;
-    }
+        #about .left p {
+            font-size: 1.1em;
+            text-align: center;
+            line-height: 1.5;
+            color: black;
+        }
 
-    /* Left side of Work Experience */
-    #work-experience .left {
-      width: 45%;
-      margin-right: auto; /* Push it closer to the center */
-    }
+        #about .right img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
 
-    /* Right side of Work Experience */
-    #work-experience .right {
-      width: 45%;
-    }
+        /* Fade-in Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-    /* Skills Section */
-    #skills {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-items: center;
-      align-items: center;
-      background-color: #d9f7be; /* Light green */
-      color: #333;
-      text-align: center; /* Center the text */
-      padding-top: 40px;
-    }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar-left {
+                flex-direction: row;
+                align-items: center;
+                padding-left: 10px;
+            }
 
-    #skills h2 {
-      grid-column: span 3; /* Make the header span all columns */
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+            .bold-text {
+                font-size: 1.2em;
+            }
 
-    .icon {
-      width: 90px;
-      height: 90px;
-    }
+            .nav-links {
+                padding-right: 10px;
+            }
 
-    .icon-title {
-      font-size: 14px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-  </style>
+            .nav-title-link {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-left {
+                padding-left: 5px;
+            }
+
+            .nav-links {
+                padding-right: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
+                <img class="icon" src="./assets/M.png" alt="Icon">
+                <span class="bold-text">Madeline Peery</span>
+            </a>
+            <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        </div>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="navbar-left">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
-        <img class="icon" src="./assets/M.png" alt="Icon">
-        <span class="bold-text">Madeline Peery</span>
-      </a>
-      <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        <div class="nav-links">
+            <a class="nav-title-link" href="./portfolio.html">Portfolio</a>
+            <a class="nav-title-link" href="madelinemaps.github.io/about.html">About</a>
+        </div>
     </div>
 
-    <div class="nav-links">
-      <a class="nav-title-link" href="madelinemaps.github.io/portfolio.html">Portfolio</a>
-      <a class="nav-title-link" href="madelinemaps.github.io/about.html">About</a>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="left">
-      <p>Hi, I'm Madeline, a GIS Analyst and Environmental Scientist. I grew up in Michigan, and after recieving my degree in Environmental Science from the University of Michigan, I packed my bags and headed west to beautiful Seattle.  I have worked extensively on projects related to chemical contamination and fate and transport, particularly regarding PFAS. I am most passionate about utilizing geospatial technology to help solve issues relating to water resources, public health, and environmental policy. Outside of work you can find me hiking, training for marathons, or curled up with a good book on a rainy day.</p>
-    </div>
-    <div class="right">
-      <img src="assets/M.png" alt="Profile Image">
-    </div>
-  </section>
-
-  <!-- Work Experience Section -->
-  <section id="work-experience">
-    <div class="left">
-      <h3>Gradient</h3>
-      <p><strong>Location:</strong> Seattle, Washington</p>
-      <p><strong>Year:</strong> 2021 - Present</p>
-    </div>
-    <div class="right">
-      <ul>
-        <li>Responsible for overseeing operations.</li>
-        <li>Led a team of 10 people to success.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="work-experience">
-    <div class="left">
-      <h3>Workplace</h3>
-      <p><strong>Location:</strong> City, Country</p>
-      <p><strong>Year:</strong> 2018 - 2020</p>
-    </div>
-    <div class="right">
-      <ul>
-        <li>Developed innovative solutions for clients.</li>
-        <li>Managed several high-priority projects simultaneously.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 1">
-      <p class="icon-title">Skill 1</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 2">
-      <p class="icon-title">Skill 2</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 3">
-      <p class="icon-title">Skill 3</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 4">
-      <p class="icon-title">Skill 4</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 5">
-      <p class="icon-title">Skill 5</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 6">
-      <p class="icon-title">Skill 6</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 7">
-      <p class="icon-title">Skill 7</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 8">
-      <p class="icon-title">Skill 8</p>
-    </div>
-    <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 9">
-      <p class="icon-title">Skill 9</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="left">
+            <p>Hi, I'm Madeline, a GIS Analyst and Environmental Scientist. I grew up in Michigan, and after receiving my degree in Environmental Science from the University of Michigan, I packed my bags and headed west to beautiful Seattle.  I have worked extensively on projects related to chemical contamination and fate and transport, particularly regarding PFAS. I am most passionate about utilizing geospatial technology to help solve issues relating to water resources, public health, and environmental policy. Outside of work, you can find me hiking, training for marathons, or curled up with a good book on a rainy day.</p>
+        </div>
+        <div class="right">
+            <img src="assets/M.png" alt="Profile Image">
+        </div>
+    </section>
 
 </body>
 </html>
-
-
-  
