@@ -7,47 +7,55 @@
     <style>
         /* Navbar Styling */
 /* Navbar Styling */
+        /* Navbar Styling */
         .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: space-between; /* Space out the items */
+            align-items: center; /* Vertically align items */
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 20px;
+            padding: 10px 20px; /* Add 20px padding to both sides */
             width: 100%;
-            position: fixed;
+            position: absolute;
             top: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 10;
         }
+
         /* Left side: icon and title */
         .navbar-left {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left: 20px;
+            flex-direction: column; /* Arrange the icon and title vertically */
+            align-items: flex-start; /* Left-align the text */
+            padding-left: 20px; /* Add left padding for space */
         }
 
         .icon {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
+            margin-right: 10px; /* Space between icon and title */
         }
 
         .bold-text {
             font-weight: bold;
-            font-size: 1.5em;
+            font-size: 1.5em; /* Adjust size as needed */
         }
 
         .title-text {
             font-weight: normal;
-            font-size: 1.2em;
+            font-size: 1.2em; /* Adjust size as needed */
+        }
+
+        /* Left side title link (Make it clickable) */
+        .navbar-left a {
+            text-decoration: none;
+            color: black; /* Ensure it is black and not blue */
         }
 
         /* Right side: nav links */
         .nav-links {
             display: flex;
             align-items: center;
-            padding-right: 20px;
+            padding-right: 20px; /* Add padding to the right side */
         }
 
         .nav-title-link {
