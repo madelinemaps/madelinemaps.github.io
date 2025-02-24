@@ -1,92 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link rel="icon" href="./assets/images/1311.png" />
-  <title>My Portfolio</title>
-  <meta name="description" content="Welcome to my portfolio!">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Page</title>
   <style>
-    body, html {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      height: 100%;
-      font-family: 'Sulphur Point', sans-serif;
-      color: black;
-      display: flex;
-      flex-direction: column; /* Stack sections vertically */
-      align-items: center;
-      background-image: url('./assets/images/mountains.jpg');
-      background-size: cover;
-      background-position: center;
-      animation: fadeIn 2s ease-in-out forwards;
+      padding: 0;
     }
 
-    /* Navbar Styling */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px 20px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-
-    /* Left side: icon and title */
-        .navbar-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left: 20px;
-        }
-
-        .icon {
-            width: 10px;
-            height: 10px;
-            margin-right: 10px;
-        }
-
-        .bold-text {
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-
-        .title-text {
-            font-weight: normal;
-            font-size: 1.2em;
-        }
-
-
-    /* Right side: nav links */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      padding-right: 20px;
-    }
-
-    .nav-title-link {
-      text-decoration: none;
-      font-size: 1.2em;
-      color: #333;
-      padding: 10px;
-      margin-left: 20px;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-title-link:hover {
-      transform: scale(1.1); /* Slightly increase size on hover */
-      text-decoration: none; /* Ensure no underline */
-      color: #333; /* Keep the color the same on hover */
-    }
-
-    .nav-title-link:active {
-      text-decoration: none; /* Ensure no underline when clicked */
-      color: #333; /* Keep the color the same when clicked */
+    section {
+      padding: 40px;
+      margin: 0;
     }
 
     /* About Section */
@@ -96,18 +23,36 @@
       align-items: center;
       background-color: #f0f8ff; /* Light blue */
       color: #333;
-      width: 100%; /* Ensure full width */
-  padding: 40px 20px; /* 40px top/bottom padding, 20px left/right padding */      
-      margin-top: 80px; /* Space after navbar */
+      width: 100%;
+      max-width: 1200px; /* Limit the width */
+      margin: 0 auto; /* Center the section */
+      padding: 40px 20px; /* Add padding to the section */
     }
 
+    /* Left side - Square with description */
     #about .left {
-      width: 50%;
+      width: 45%; /* Adjust the width */
+      background-color: #fff; /* White background for the square */
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+      border-radius: 8px; /* Rounded corners */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    #about .left p {
+      font-size: 1.1em;
+      text-align: center; /* Center the text */
+      line-height: 1.5; /* Adjust line height for readability */
+    }
+
+    /* Right side - Profile image */
     #about .right img {
       width: 100%;
+      max-width: 400px; /* Limit image size */
       height: auto;
+      border-radius: 8px;
     }
 
     /* Work Experience Section */
@@ -116,11 +61,13 @@
       justify-content: space-between;
       background-color: #e6f7ff; /* Light cyan */
       color: #333;
-      width: 100%;
-      padding: 60px 40px;
+      padding: 40px 20px;
     }
-
-    #work-experience .left,
+    
+    #work-experience .left {
+      width: 45%;
+    }
+    
     #work-experience .right {
       width: 45%;
     }
@@ -135,8 +82,7 @@
       background-color: #d9f7be; /* Light green */
       color: #333;
       text-align: center; /* Center the text */
-      width: 100%;
-      padding: 60px 40px;
+      padding-top: 40px;
     }
 
     #skills h2 {
@@ -155,44 +101,17 @@
       font-weight: bold;
       margin-top: 10px;
     }
-
-    /* Fade-in Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="navbar-left">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
-        <img class="icon" src="./assets/M.png" alt="Icon">
-        <span class="bold-text">Madeline Peery</span>
-      </a>
-      <span class="title-text">GIS Analyst | Environmental Scientist</span>
-    </div>
-
-    <div class="nav-links">
-      <a class="nav-title-link" href="./portfolio.html">Portfolio</a>
-      <a class="nav-title-link" href="./about.html">About</a>
-    </div>
-  </div>
-
   <!-- About Section -->
   <section id="about">
     <div class="left">
-      <h2>About Me</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat, metus id fringilla aliquam, odio ligula auctor mi, eget dictum metus odio at turpis.</p>
     </div>
     <div class="right">
-      <img src="assets/M.png" alt="Profile Image">
+      <img src="https://via.placeholder.com/400" alt="Profile Image">
     </div>
   </section>
 
@@ -229,37 +148,42 @@
   <section id="skills">
     <h2>Skills</h2>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 1">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 1">
       <p class="icon-title">Skill 1</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 2">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 2">
       <p class="icon-title">Skill 2</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 3">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 3">
       <p class="icon-title">Skill 3</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 4">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 4">
       <p class="icon-title">Skill 4</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 5">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 5">
       <p class="icon-title">Skill 5</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 6">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 6">
       <p class="icon-title">Skill 6</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 7">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 7">
       <p class="icon-title">Skill 7</p>
     </div>
     <div>
-      <img class="icon" src="assets/M.png" alt="Skill Icon 8">
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 8">
       <p class="icon-title">Skill 8</p>
     </div>
     <div>
-      <img class="icon" src="https://via.placeholder.com/
+      <img class="icon" src="https://via.placeholder.com/90" alt="Skill Icon 9">
+      <p class="icon-title">Skill 9</p>
+    </div>
+  </section>
 
+</body>
+</html>
