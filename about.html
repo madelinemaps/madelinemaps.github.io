@@ -17,11 +17,12 @@
             color: black;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             background-image: url('./assets/images/mountains.jpg');
             background-size: cover;
             background-position: center;
             animation: fadeIn 2s ease-in-out forwards;
+            flex-direction: column; /* Ensure all sections stack vertically */
         }
 
         /* Navbar Styling */
@@ -89,6 +90,26 @@
             color: #333;
         }
 
+        /* About Me Section Styling */
+        #about-me {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 80%;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #about-me h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about-me p {
+            font-size: 1.2em;
+        }
+
         /* Work Experience Section Styling */
         #work-experience {
             display: flex;
@@ -100,6 +121,7 @@
             max-width: 900px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            width: 80%;
         }
 
         #work-experience .left {
@@ -138,6 +160,9 @@
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         #skills h2 {
@@ -237,6 +262,12 @@
         </div>
     </div>
 
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h1>About Me</h1>
+        <p>Hello! I'm Madeline Peery, a passionate GIS Analyst and Environmental Scientist. I specialize in geographic information systems (GIS) and environmental data analysis. With a background in environmental science, I strive to apply my skills in GIS to solve real-world environmental challenges and contribute to a more sustainable future.</p>
+    </section>
+
     <!-- Work Experience Section -->
     <section id="work-experience">
         <div class="left">
@@ -309,4 +340,3 @@
 
 </body>
 </html>
-
