@@ -89,48 +89,77 @@
             color: #333;
         }
 
-        /* About Section Styling */
-        section {
-            padding: 40px;
-            margin: 0;
-        }
-
-        #about {
+        /* Work Experience Section Styling */
+        #work-experience {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            color: #333;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            margin-top: 120px;
-        }
-
-        #about .left {
-            width: 45%;
+            align-items: flex-start;
             background-color: #fff;
             padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
-        #about .left p {
+        #work-experience .left {
+            width: 40%;
+        }
+
+        #work-experience .left h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #work-experience .left p {
             font-size: 1.1em;
-            text-align: center;
-            line-height: 1.5;
-            color: black;
+            margin: 5px 0;
         }
 
-        #about .right img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
+        #work-experience .right {
+            width: 55%;
+        }
+
+        #work-experience .right ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #work-experience .right ul li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section Styling */
+        #skills {
+            margin-top: 80px;
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #skills div {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #skills .icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        #skills .icon-title {
+            font-size: 1.1em;
+            color: #333;
         }
 
         /* Fade-in Animations */
@@ -162,6 +191,18 @@
             .nav-title-link {
                 font-size: 1.1em;
             }
+
+            #work-experience {
+                flex-direction: column;
+            }
+
+            #work-experience .left, #work-experience .right {
+                width: 100%;
+            }
+
+            #skills div {
+                width: 45%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -171,6 +212,10 @@
 
             .nav-links {
                 padding-right: 5px;
+            }
+
+            #skills div {
+                width: 100%;
             }
         }
     </style>
@@ -192,15 +237,76 @@
         </div>
     </div>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Work Experience Section -->
+    <section id="work-experience">
         <div class="left">
-            <p>Hi, I'm Madeline, a GIS Analyst and Environmental Scientist. I grew up in Michigan, and after receiving my degree in Environmental Science from the University of Michigan, I packed my bags and headed west to beautiful Seattle.  I have worked extensively on projects related to chemical contamination and fate and transport, particularly regarding PFAS. I am most passionate about utilizing geospatial technology to help solve issues relating to water resources, public health, and environmental policy. Outside of work, you can find me hiking, training for marathons, or curled up with a good book on a rainy day.</p>
+            <h3>Gradient</h3>
+            <p><strong>Location:</strong> Seattle, Washington</p>
+            <p><strong>Year:</strong> 2021 - Present</p>
         </div>
         <div class="right">
-            <img src="assets/M.png" alt="Profile Image">
+            <ul>
+                <li>Responsible for overseeing operations.</li>
+                <li>Led a team of 10 people to success.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="work-experience">
+        <div class="left">
+            <h3>Workplace</h3>
+            <p><strong>Location:</strong> City, Country</p>
+            <p><strong>Year:</strong> 2018 - 2020</p>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Developed innovative solutions for clients.</li>
+                <li>Managed several high-priority projects simultaneously.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 1">
+            <p class="icon-title">Skill 1</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 2">
+            <p class="icon-title">Skill 2</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 3">
+            <p class="icon-title">Skill 3</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 4">
+            <p class="icon-title">Skill 4</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 5">
+            <p class="icon-title">Skill 5</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 6">
+            <p class="icon-title">Skill 6</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 7">
+            <p class="icon-title">Skill 7</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 8">
+            <p class="icon-title">Skill 8</p>
+        </div>
+        <div>
+            <img class="icon" src="assets/M.png" alt="Skill Icon 9">
+            <p class="icon-title">Skill 9</p>
         </div>
     </section>
 
 </body>
 </html>
+
