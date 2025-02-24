@@ -1,86 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
+    <style>
+        /* Basic reset for body and html */
+        body, html {
+            margin: 0;
+            height: 100%;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./assets/images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in effect */
+        }
 
-    section {
-      padding: 40px;
-      margin: 0;
-    }
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Space out the items */
+            align-items: center; /* Vertically align items */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px; /* Add 20px padding to both sides */
+            width: 100%;
+            position: absolute;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
 
-    /* Navbar Styling */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffffff;
-      padding: 10px 20px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
+        /* Left side: icon and title */
+        .navbar-left {
+            display: flex;
+            flex-direction: column; /* Arrange the icon and title vertically */
+            align-items: flex-start; /* Left-align the text */
+            padding-left: 20px; /* Add left padding for space */
+        }
 
-    /* Left side: icon and title */
-    .navbar-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-left: 20px;
-    }
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px; /* Space between icon and title */
+        }
 
-    /* Navbar Icon Styling */
-    .icon {
-      width: 20px; /* Adjust the size */
-      height: 20px; /* Adjust the size */
-      margin-right: 10px;
-    }
+        .bold-text {
+            font-weight: bold;
+            font-size: 1.5em; /* Adjust size as needed */
+        }
 
-    .bold-text {
-      font-weight: bold;
-      font-size: 1.5em;
-    }
+        .title-text {
+            font-weight: normal;
+            font-size: 1.2em; /* Adjust size as needed */
+        }
 
-    .title-text {
-      font-weight: normal;
-      font-size: 1.2em;
-    }
+        /* Left side title link (Make it clickable) */
+        .navbar-left a {
+            text-decoration: none;
+            color: black; /* Ensure it is black and not blue */
+        }
 
-    /* Right side: nav links */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      padding-right: 20px;
-    }
+        /* Right side: nav links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            padding-right: 20px; /* Add padding to the right side */
+        }
 
-    .nav-title-link {
-      text-decoration: none;
-      font-size: 1.2em;
-      color: #333;
-      padding: 10px;
-      margin-left: 20px;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px;
+            margin-left: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-    .nav-title-link:hover {
-      transform: scale(1.1); /* Slightly increase size on hover */
-      text-decoration: none; /* Ensure no underline */
-      color: #333; /* Keep the color the same on hover */
-    }
+        .nav-title-link:hover {
+            transform: scale(1.1); /* Slightly increase size on hover */
+            text-decoration: none; /* Ensure no underline */
+            color: #333; /* Keep the color the same on hover */
+        }
 
-    .nav-title-link:active {
-      text-decoration: none; /* Ensure no underline when clicked */
-      color: #333; /* Keep the color the same when clicked */
-    }
+        .nav-title-link:active {
+            text-decoration: none; /* Ensure no underline when clicked */
+            color: #333; /* Keep the color the same when clicked */
+        }
+
 
     /* About Section */
 #about {
