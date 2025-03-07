@@ -95,5 +95,74 @@
         /* Main Content Styling */
         .container {
             display: flex;
-            width: 100
+            width: 100%;
+            height: 100vh;
+            margin-top: 80px;
+        }
+
+        .image-container {
+            flex: 1;
+            background-color: #ADD8E6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 600px; /* Set the width of the image */
+            height: 400px; /* Set the height of the image */
+            object-fit: cover; /* Ensures the image covers the container proportionally */
+        }
+
+        .text-container {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
+                <img class="icon" src="https://madelinemaps.github.io/assets/M.png" alt="Icon">
+                <span class="bold-text">Madeline Peery</span>
+            </a>
+            <span class="title-text">GIS Analyst | Environmental Scientist</span>
+        </div>
+
+        <div class="nav-links">
+            <a class="nav-title-link" href="https://madelinemaps.github.io/portfolio.html">Portfolio</a>
+            <a class="nav-title-link" href="./about.html">About</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="image-container">
+            <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Bear River Image">        
+        </div>
+        <div class="text-container">
+            <h1>Paris in 5 Minutes</h1>
+            <p>This project focuses on creating a Digital Elevation Model (DEM) for the Bear River region. We analyze the elevation data to assist in conservation efforts and land-use planning, ensuring the natural landscape is preserved while providing vital data for future projects.</p>
+        </div>
+    </div>
+
+</body>
+</html>
 
