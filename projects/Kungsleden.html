@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bear River Digital Elevation Model</title>
 
+    <!-- Meta Tags and Links from the Second Code -->
     <meta name="description" content="Welcome to my portfolio!">
     <link rel="icon" href="./assets/images/1311.png" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -27,18 +28,19 @@
         }
 
         /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 10px 20px;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 10;
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Opaque white background */
+    padding: 10px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
 
         /* Left side: icon and title */
         .navbar-left {
@@ -81,14 +83,14 @@
         }
 
         .nav-title-link:hover {
-            transform: scale(1.1);
-            text-decoration: none;
-            color: #333;
+            transform: scale(1.1); /* Slightly increase size on hover */
+            text-decoration: none; /* Ensure no underline */
+            color: #333; /* Keep the color the same on hover */
         }
 
         .nav-title-link:active {
-            text-decoration: none;
-            color: #333;
+            text-decoration: none; /* Ensure no underline when clicked */
+            color: #333; /* Keep the color the same when clicked */
         }
 
         /* Main Content Styling */
@@ -100,17 +102,15 @@
 
         .image-container {
             flex: 1;
-            background-color: #ADD8E6;
+            background-color: #ADD8E6; /* Light blue background */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Ensures the image doesn't overflow */
         }
 
         .image-container img {
-            max-width: 70%; /* Resize the image to 70% of the container width */
-            height: auto; /* Keep aspect ratio */
-            object-fit: contain; /* Ensures the image is not stretched */
+            max-width: 80%;
+            height: auto;
         }
 
         .text-container {
@@ -154,7 +154,13 @@
     <!-- Main Content -->
     <div class="container">
         <div class="image-container">
-            <!-- Image wrapped in an anchor tag for full-size view -->
-            <a href="https://madelinemaps.github.io/assets/Kungsleden.png" target="_blank">
-                <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Bear River DEM">
-            <
+            <img src="https://madelinemaps.github.io/assets/Kungsleden.png" width="700" height="1200" alt="Bear River Image">        
+        </div>
+        <div class="text-container">
+            <h1>Paris in 5 Minutes</h1>
+            <p>This project focuses on creating a Digital Elevation Model (DEM) for the Bear River region. We analyze the elevation data to assist in conservation efforts and land-use planning, ensuring the natural landscape is preserved while providing vital data for future projects.</p>
+        </div>
+    </div>
+
+</body>
+</html>
