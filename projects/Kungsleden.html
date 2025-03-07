@@ -32,7 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #ffffff; /* Opaque white background */
+            background-color: #ffffff;
             padding: 10px 20px;
             width: 100%;
             position: absolute;
@@ -82,41 +82,39 @@
         }
 
         .nav-title-link:hover {
-            transform: scale(1.1); /* Slightly increase size on hover */
-            text-decoration: none; /* Ensure no underline */
-            color: #333; /* Keep the color the same on hover */
+            transform: scale(1.1);
+            text-decoration: none;
+            color: #333;
         }
 
         .nav-title-link:active {
-            text-decoration: none; /* Ensure no underline when clicked */
-            color: #333; /* Keep the color the same when clicked */
+            text-decoration: none;
+            color: #333;
         }
 
         /* Main Content Styling */
-        ./* Main Content Styling */
-.container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    margin-top: 60px; /* Add margin-top to avoid overlap with navbar */
-}
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            margin-top: 60px; /* Add space for navbar */
+        }
 
-.image-container {
-    flex: 1;
-    background-color: #ADD8E6; /* Light blue background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+        .image-container {
+            flex: 1;
+            background-color: #ADD8E6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Make image clickable */
+        }
 
-.image-container img {
-    max-width: 80%; /* Limit the width to 80% of the container */
-    max-height: 600px; /* Limit the height to 600px to prevent overflow */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-}
-
+        .image-container img {
+            max-width: 80%;
+            max-height: 600px;
+            width: auto;
+            height: auto;
+        }
 
         .text-container {
             flex: 1;
@@ -135,6 +133,46 @@
         p {
             font-size: 1.2em;
             line-height: 1.6;
+        }
+
+        /* Modal Styling */
+        /* The modal (hidden by default) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Modal content */
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -158,8 +196,8 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="image-container">
-            <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Bear River Image">        
+        <div class="image-container" id="myImage">
+            <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Bear River Image">
         </div>
         <div class="text-container">
             <h1>Paris in 5 Minutes</h1>
@@ -167,6 +205,39 @@
         </div>
     </div>
 
+    <!-- Modal for full-size image -->
+    <div id="myModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var img = document.getElementById("myImage").getElementsByTagName('img')[0];
+        var modalImg = document.getElementById("modalImage");
+
+        // When the user clicks on the image, open the modal
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementById("closeModal");
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
-
