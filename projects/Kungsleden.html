@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bear River Digital Elevation Model</title>
 
-    <!-- Meta Tags and Links from the Second Code -->
     <meta name="description" content="Welcome to my portfolio!">
     <link rel="icon" href="./assets/images/1311.png" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -24,7 +23,6 @@
             background-image: url('./assets/images/mountains.jpg');
             background-size: cover;
             background-position: center;
-            animation: fadeIn 2s ease-in-out forwards;
         }
 
         /* Navbar Styling */
@@ -106,12 +104,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
 
         .image-container img {
-            width: auto; /* Set the width of the image */
-            height: 600px; /* Set the height of the image */
-            object-fit: contain; /* Ensures the image covers the container proportionally */
+            width: auto;
+            height: 600px;
+            object-fit: contain;
         }
 
         .text-container {
@@ -131,6 +130,42 @@
         p {
             font-size: 1.2em;
             line-height: 1.6;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            cursor: zoom-in;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+            z-index: 1100;
         }
     </style>
 </head>
@@ -154,7 +189,7 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="image-container">
+        <div class="image-container" onclick="openModal()">
             <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Bear River Image">        
         </div>
         <div class="text-container">
@@ -162,6 +197,33 @@
             <p>This project focuses on creating a Digital Elevation Model (DEM) for the Bear River region. We analyze the elevation data to assist in conservation efforts and land-use planning, ensuring the natural landscape is preserved while providing vital data for future projects.</p>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <div class="modal-content">
+            <img src="https://madelinemaps.github.io/assets/Kungsleden.png" alt="Full-Size Bear River Image">
+        </div>
+    </div>
+
+    <script>
+        // Open the modal
+        function openModal() {
+            document.getElementById("imageModal").style.display = "flex";
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Close the modal if clicked outside the image
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("imageModal")) {
+                closeModal();
+            }
+        }
+    </script>
 
 </body>
 </html>
