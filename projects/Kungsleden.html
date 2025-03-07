@@ -28,18 +28,19 @@
         }
 
         /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 10px 20px;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 10;
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Opaque white background */
+    padding: 10px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
 
         /* Left side: icon and title */
         .navbar-left {
@@ -82,14 +83,14 @@
         }
 
         .nav-title-link:hover {
-            transform: scale(1.1);
-            text-decoration: none;
-            color: #333;
+            transform: scale(1.1); /* Slightly increase size on hover */
+            text-decoration: none; /* Ensure no underline */
+            color: #333; /* Keep the color the same on hover */
         }
 
         .nav-title-link:active {
-            text-decoration: none;
-            color: #333;
+            text-decoration: none; /* Ensure no underline when clicked */
+            color: #333; /* Keep the color the same when clicked */
         }
 
         /* Main Content Styling */
